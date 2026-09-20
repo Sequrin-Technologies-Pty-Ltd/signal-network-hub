@@ -22,7 +22,7 @@ const sections = [
     paragraphs: [
       "Sequrin Technologies (Pty) Ltd, enterprise number 2026/662912/07, is a South African private company. Its principal place of business and registered office is 1918 Potomac Street, Rietvallei, Krugersdorp, Gauteng, 1754.",
       "The head of the private body and Information Officer is Sbusiso Mdingi, Chief Executive Officer. Sequrin is registered with the Information Regulator under organisation registration number 2026-064989, registered on 22 August 2026. The Information Officer appointment date is 19 August 2026. There is currently no Deputy Information Officer.",
-      "PAIA requests and access enquiries may be sent to info@sequrin.com or +27 84 222 0684. Physical inspection or delivery at the principal place of business should be arranged in advance because the premises are not operated as a public reception office.",
+      "PAIA requests and access enquiries may be sent to info@sequrin.com or +27 11 558 9111. Physical inspection or delivery at the principal place of business should be arranged in advance because the premises are not operated as a public reception office.",
     ],
   },
   {
