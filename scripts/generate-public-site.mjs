@@ -100,7 +100,16 @@ function structuredData() {
         email: contactEmail,
         logo: "https://sequrin.com/favicon.svg",
         identifier: "2026/662912/07",
-        founder: { "@type": "Person", name: "Sbusiso Mdingi" },
+        founder: {
+          "@type": "Person",
+          "@id": "https://mdingi.co.za/#person",
+          name: "Sbusiso Mdingi",
+          url: "https://mdingi.co.za/",
+          sameAs: [
+            "https://www.linkedin.com/in/ssmdingi",
+            "https://orcid.org/0009-0003-4417-968X",
+          ],
+        },
         description:
           "A South African healthcare technology company building claims-integrity software for medical schemes.",
       },
@@ -132,7 +141,7 @@ function renderPage({
   const preload = preloadImage
     ? `<link rel="preload" as="image" href="${assetPrefix}assets/product/connected-claims-network.webp" type="image/webp">`
     : "";
-  const schema = route === "/" ? structuredData() : "";
+  const schema = route === "/" || route === "/about/" ? structuredData() : "";
 
   return `<!DOCTYPE html>
 <html lang="en-ZA">
@@ -420,7 +429,7 @@ const pages = [
 
 <section class="section"><div class="container stage-layout"><div class="section-heading"><p class="eyebrow">Where the company is now</p><h2>Product built; operating evidence next.</h2><p>The product already spans browser and desktop investigation experiences. The next step is controlled evaluation with an appropriate organisation, using a bounded question and agreed success measures.</p></div><div class="stage-list"><article><p class="stage-label">Product</p><h3>Connected claims review</h3><p>Browser and desktop experiences bring signals, relationships and case context into one workflow.</p></article><article><p class="stage-label">Evaluation</p><h3>Evidence-led next step</h3><p>A controlled evaluation can measure relevance, time to context and workflow fit.</p></article><article><p class="stage-label">Direction</p><h3>Broader collaboration later</h3><p>Cross-organisation intelligence depends on validated product and governance foundations.</p></article></div></div></section>
 
-<section class="section surface"><div class="container founder-card"><figure><img src="../assets/sbusiso-mdingi-founder.webp" width="640" height="640" loading="lazy" decoding="async" alt="Sbusiso Mdingi, founder of Sequrin."></figure><div><p class="eyebrow">Founder</p><h2>Sbusiso Mdingi</h2><p>Sbusiso Mdingi founded Sequrin and is building the company from South Africa around a focused question: how can connected claims context support earlier, more careful investigation?</p><p>That question shapes the product, the company’s evaluation approach and the evidence it intends to build with participating organisations.</p></div></div></section>
+<section class="section surface"><div class="container founder-card"><figure><img src="../assets/sbusiso-mdingi-founder.webp" width="640" height="640" loading="lazy" decoding="async" alt="Sbusiso Mdingi, founder of Sequrin."></figure><div><p class="eyebrow">Founder</p><h2>Sbusiso Mdingi</h2><p>Sbusiso Mdingi founded Sequrin and is building the company from South Africa around a focused question: how can connected claims context support earlier, more careful investigation?</p><p>That question shapes the product, the company’s evaluation approach and the evidence it intends to build with participating organisations.</p><p>Sbusiso is an Actuarial Science graduate of the University of the Free State. His wider actuarial, risk and research work is at <a href="https://mdingi.co.za/" rel="author">mdingi.co.za</a>, and he is on <a href="https://www.linkedin.com/in/ssmdingi" rel="noopener">LinkedIn</a>.</p></div></div></section>
 
 <section class="section cta-section"><div class="container cta-grid"><div><p class="eyebrow">Contact</p><h2>Start with one claims-integrity question.</h2><p>For company, product, research or evaluation enquiries, contact Sequrin directly.</p></div><div class="actions"><a class="button primary" href="mailto:${contactEmail}">Contact Sequrin</a><a class="button secondary" href="../product/">Explore the product</a></div></div></section>`,
   },
